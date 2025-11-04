@@ -1,1 +1,0 @@
-![alt text](Request-Vacation-Flowchart.png)

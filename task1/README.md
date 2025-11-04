@@ -70,13 +70,68 @@ The organization aims to:
 
 ## 🚧 Constraints
 
-*To be completed...*
+### Technical/Architectural:
+- The system must prevent the client browser from being in direct contact with the database or business application components.
+- The system must integrate with the company's existing intranet portal.
+
+### Infrastructure:
+- The system must operate only within the company's network.
+- The system must use the company's existing email server.
+
+### Business/Policy:
+- The system must comply with company leave policies and rules.
+- Manager approval requirements must be configurable per company policy.
+
+*Note: Some constraints are inferred from the system context, as Chapter 12 does not explicitly list all constraints.*
 
 ---
 
+
+## 🌍 Problem Domain
+
+### Problem Statement
+
+Employees and managers currently rely on manual processes and HR intervention to request, track, and approve vacation time, resulting in administrative overhead, delays, and lack of employee autonomy.
+
+---
+
+### Scope - IN (VTS Responsibilities):
+
+* VTS is responsible for providing users with a website to manage vacations
+* VTS is responsible for verifying users with credentials
+* VTS is responsible for providing users with their vacation balance and history
+* VTS is responsible for allowing users to create vacation requests
+* VTS is responsible for allowing managers to review and take actions on vacation requests
+* VTS is responsible for sending email notifications to managers when there are requests to review
+* VTS is responsible for sending notifications to employees when actions are taken on their requests
+* VTS is responsible for calculating 4 hours as 1/2 day vacation automatically
+* VTS is responsible for displaying available vacation categories to users
+* VTS is responsible for routing approval requests to appropriate managers
+* VTS is responsible for validating vacation requests against available balances and business rules
+
+---
+
+# Why should I provide these? aren't they clear?
+### Scope - OUT (NOT VTS Responsibilities):
+
+* VTS is NOT responsible for defining company vacation policies or creating vacation categories (uses existing policies)
+* VTS is NOT responsible for creating or managing the organizational structure (uses existing employee-manager relationships)
+* VTS is NOT responsible for sending notifications to HR department
+* VTS is NOT responsible for validating if vacation days contain holidays
+* VTS is NOT responsible for adding default hours for the day (users must enter manually)
+
+---
+
+
 ## 👥 Actors
 
-*To be completed...*
+### Human Actors:
+- **Employee:** Can request vacation time and review vacation history and balance
+- **Manager:** Can approve/deny vacation requests from subordinates, and can also request vacation time for themselves
+
+### System Actors:
+- **Email Server:** Sends email notifications to managers and employees regarding vacation request status
+- **Intranet Portal:** Provides access point for employees and managers to reach the VTS
 
 ---
 

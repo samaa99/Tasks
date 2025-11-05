@@ -135,6 +135,21 @@ Employees and managers currently rely on manual processes and HR intervention to
 
 ---
 
+## Request Vacation- Employee Main Flow
+![alt text](Request-Vacation-Flowchart.png)
+
+
+## Taking Actions on Vacations Requests- Manager Main Flow
+![alt text](Request-Action-On-Flowchart.png)
+
+---
+
+![alt text](Employee-Sequesnce-Diagram.png)
+
+![alt text](Manager-Sequence-Diagram.png)
+
+
+---
 ## 📚 Reference
 
 This project is based on:

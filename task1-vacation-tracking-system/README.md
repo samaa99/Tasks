@@ -150,26 +150,6 @@ Employees and managers currently rely on manual processes and HR intervention to
 
 
 ---
-## 📚 Reference
-
-This project is based on:
-- **Book:** Object-Oriented Analysis and Design with Applications (Third Edition)
-- **Authors:** Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Ph.D., Jim Conallen, Kelli A. Houston
-- **Chapter:** 12 - Web Application: Vacation Tracking System
-
----
-
-## 📝 Learning Objectives
-
-- Understanding requirements gathering and analysis
-- Applying UML diagrams to real-world scenarios
-- Practicing Object-Oriented Analysis and Design principles
-- Creating comprehensive system documentation
-
----
-
-
-
 
 
 # Withdraw Pending Request
@@ -194,3 +174,62 @@ This project is based on:
 
 ![alt text](withdraw_pending_request_sequence_diagram.png)
 
+
+## Database Changes
+
+### Tables Affected: `Request`
+Need to add the new status `Withdrawn` to the table
+
+
+----
+
+# Cancel Approved Request
+
+## Use Case Description
+
+**Goal:** The employee wants to cancel an approved vacation time request.
+
+**Actor:** Employee
+
+**Preconditions:** 
+- Employee is authenticated
+- Employee has a vacation time request that has been approved
+- Request is scheduled for future OR recent past (within 5 business days)
+
+## Flowchart
+
+![alt text](cancel_approved_request.png)
+
+---
+
+## Sequence Diagram
+
+![alt text](cancel_approved_request_sequesnce_diagram.png)
+
+---
+
+## Database Changes
+
+### Tables Affected: `Request`, `EmployeeVacationBalance`
+**Request**: Only for recent past, we need to add `explanasion`
+**EmployeeVacationBalance**: Restore used hours
+
+----
+
+## 📚 Reference
+
+This project is based on:
+- **Book:** Object-Oriented Analysis and Design with Applications (Third Edition)
+- **Authors:** Grady Booch, Robert A. Maksimchuk, Michael W. Engle, Bobbi J. Young, Ph.D., Jim Conallen, Kelli A. Houston
+- **Chapter:** 12 - Web Application: Vacation Tracking System
+
+---
+
+## 📝 Learning Objectives
+
+- Understanding requirements gathering and analysis
+- Applying UML diagrams to real-world scenarios
+- Practicing Object-Oriented Analysis and Design principles
+- Creating comprehensive system documentation
+
+---

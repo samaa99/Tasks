@@ -167,3 +167,30 @@ This project is based on:
 - Creating comprehensive system documentation
 
 ---
+
+
+
+
+
+# Withdraw Pending Request
+
+## Use Case Description
+
+**Goal:** The employee wants to withdraw an outstanding request for vacation time that is currently pending approval.
+
+**Actor:** Employee
+
+**Preconditions:** 
+- Employee is authenticated
+- Employee has made a vacation time request
+- Request status is "Pending" (not yet approved or denied by manager)
+
+## Flowchart
+
+![alt text](withdraw-pending-request.png)
+
+
+## Sequence Diagram
+
+![alt text](withdraw_pending_request_sequence_diagram.png)
+

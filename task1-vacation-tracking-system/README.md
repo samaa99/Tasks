@@ -137,25 +137,18 @@ Employees and managers currently rely on manual processes and HR intervention to
 
 ## Request Vacation- Employee Main Flow
 ![alt text](Request-Vacation-Flowchart.png)
+![alt text](Employee-Sequesnce-Diagram.png)
 
+---
 
 ## Taking Actions on Vacations Requests- Manager Main Flow
 ![alt text](Request-Action-On-Flowchart.png)
-
----
-
-![alt text](Employee-Sequesnce-Diagram.png)
-
 ![alt text](Manager-Sequence-Diagram.png)
 
-
 ---
 
-
 # Withdraw Pending Request
-
 ## Use Case Description
-
 **Goal:** The employee wants to withdraw an outstanding request for vacation time that is currently pending approval.
 
 **Actor:** Employee
@@ -165,28 +158,23 @@ Employees and managers currently rely on manual processes and HR intervention to
 - Employee has made a vacation time request
 - Request status is "Pending" (not yet approved or denied by manager)
 
+---
 ## Flowchart
-
 ![alt text](withdraw-pending-request.png)
 
-
+---
 ## Sequence Diagram
-
 ![alt text](withdraw_pending_request_sequence_diagram.png)
 
-
+---
 ## Database Changes
-
 ### Tables Affected: `Request`
 Need to add the new status `Withdrawn` to the table
 
 
 ----
-
 # Cancel Approved Request
-
 ## Use Case Description
-
 **Goal:** The employee wants to cancel an approved vacation time request.
 
 **Actor:** Employee
@@ -196,18 +184,17 @@ Need to add the new status `Withdrawn` to the table
 - Employee has a vacation time request that has been approved
 - Request is scheduled for future OR recent past (within 5 business days)
 
+---
 ## Flowchart
 
 ![alt text](cancel_approved_request.png)
 
 ---
-
 ## Sequence Diagram
 
 ![alt text](cancel_approved_request_sequesnce_diagram.png)
 
 ---
-
 ## Database Changes
 
 ### Tables Affected: `Request`, `EmployeeVacationBalance`
@@ -215,6 +202,35 @@ Need to add the new status `Withdrawn` to the table
 **EmployeeVacationBalance**: Restore used hours
 
 ----
+
+# Edit Pending Request
+
+## Use Case Description
+
+**Goal:** The employee wants to edit the description, title, or dates of a pending request.
+
+**Actor:** Employee
+
+**Preconditions:** 
+- Employee is authenticated
+- Employee has a vacation time request with status = "Pending"
+- Request has not yet been approved or denied by manager
+
+---
+## Flowchart
+
+![alt text](edit_vacation_request.png)
+
+---
+## Sequence Diagram
+
+![alt text](edit_request_sequesnce_diagram.png)
+
+---
+## Database Changes
+### Tables Affected: `Request`
+
+---
 
 ## 📚 Reference
 
